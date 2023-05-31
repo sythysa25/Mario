@@ -5,12 +5,13 @@
 }
 
 .game-board {
-    width: 70%;
+    width: 100%;
     height: 500px;
-    border: 1.5px solid #333;
+    border-bottom: 10px solid #11b339;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(#87cdeb, #e0f6ff);
 }
 
 .pipe {
@@ -28,6 +29,22 @@
 
 .jump {
     animation: jump 500ms ease-out;
+}
+
+.cloud {
+    position: absolute;
+    width: 360px;
+    animation: cloud-animation 9s infinite linear;
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -250px;
+    }
+
+    to {
+        right: 100%;
+    }
 }
 
 @keyframes pipe-animation {
@@ -57,3 +74,4 @@
         bottom: 180px;
     }
 }
+
